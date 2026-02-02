@@ -1,7 +1,9 @@
 import { useMessage } from "../context/MessageContext";
 
 export default function GrandChild() {
-  const message = useMessage();
+  const { message } = useMessage();
+  console.log(message);
+
   return (
     <div style={{ border: "solid red" }}>
       <h1>GrandChild</h1>
