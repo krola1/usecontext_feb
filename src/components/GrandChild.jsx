@@ -1,12 +1,13 @@
 import { useMessage } from "../context/MessageContext";
+import { useTheme } from "../context/ThemeContext";
 
 export default function GrandChild() {
   const { message } = useMessage();
-  console.log(message);
+  const { theme } = useTheme();
 
   return (
     <div style={{ border: "solid red" }}>
-      <h1>GrandChild</h1>
+      <h1 className={theme}>GrandChild</h1>
       <h3>message: {message} </h3>
     </div>
   );

@@ -1,11 +1,14 @@
 import "./App.css";
+
 import Parent from "./components/Parent";
+import { useTheme } from "./context/ThemeContext";
 
 function App() {
+  const { toggleTheme } = useTheme();
   //state
   return (
     <>
-      <button>Toogle theme</button>
+      <button onClick={toggleTheme}>Toogle theme</button>
       <Parent />
     </>
   );
